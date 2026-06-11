@@ -1,20 +1,20 @@
 cask "jdf" do
-  version "0.1.0"
-  sha256 "b68043a514ad1725f78a90c9100cc5ddd7490a0958b6da729d8241716c1832a9"
+  version "0.1.3"
+  sha256 "a514c340143e5578ad0cdf02d2fe250dd3cff269c8b159033e6be917b52a9cad"
 
-  url "https://github.com/uurtech/jdf/releases/download/v#{version}/JDF.Viewer_#{version}_aarch64.dmg"
-  name "JDF Viewer"
-  desc "Viewer and editor for the JDF (JSON Document Format)"
+  url "https://github.com/uurtech/jdf/releases/download/v#{version}/JDF.Reader_#{version}_aarch64.dmg"
+  name "JDF Reader"
+  desc "Reader and editor for the JDF (JSON Document Format)"
   homepage "https://github.com/uurtech/jdf"
 
   depends_on arch: :arm64
   depends_on macos: ">= :catalina"
 
-  app "JDF Viewer.app"
+  app "JDF Reader.app"
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args:         ["-cr", "#{appdir}/JDF Viewer.app"],
+                   args:         ["-cr", "#{appdir}/JDF Reader.app"],
                    sudo:         false,
                    must_succeed: false
   end
