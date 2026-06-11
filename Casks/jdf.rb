@@ -1,4 +1,4 @@
-cask "jdf-viewer" do
+cask "jdf" do
   version "0.1.0"
   sha256 "b68043a514ad1725f78a90c9100cc5ddd7490a0958b6da729d8241716c1832a9"
 
